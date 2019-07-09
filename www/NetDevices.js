@@ -4,7 +4,7 @@ var NetDevices = function() {
     console.log('NetDevices instanced');
 };
 
-NetDevices.prototype.show = function(msg, onSuccess, onError) {
+NetDevices.prototype.obtenerips = function(msg, onSuccess, onError) {
     var errorCallback = function(obj) {
         onError(obj);
     };
@@ -13,7 +13,7 @@ NetDevices.prototype.show = function(msg, onSuccess, onError) {
         onSuccess(obj);
     };
 
-    exec(successCallback, errorCallback, 'NetDevices', 'show', [msg]);
+    exec(successCallback, errorCallback, 'NetDevices', 'obtenerips', [msg]);
 };
 
 if (typeof module != 'undefined' && module.exports) {
