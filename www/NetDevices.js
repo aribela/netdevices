@@ -1,16 +1,19 @@
 var exec = cordova.require('cordova/exec');
 
 var NetDevices = function() {
-    console.log('NetDevices instanced');
+    alert('NetDevices instanced');
 };
 
 NetDevices.prototype.obtenerips = function(msg, onSuccess, onError) {
 	try{
+		alert("entre a net");
 		var errorCallback = function(obj) {
+			alert("error en net");
 	        onError(obj);
 	    };
 
 	    var successCallback = function(obj) {
+	    	alert("success net");
 	        onSuccess(obj);
 	    };
 
