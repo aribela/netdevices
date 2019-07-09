@@ -1,4 +1,4 @@
-
+package com.framelova;
 
 import org.apache.cordova.CordovaPlugin;
 import java.io.BufferedReader;
