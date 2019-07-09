@@ -5,7 +5,7 @@ import android.content.res.Resources;
 import android.util.Log;
 import android.widget.Toast;
 
-// import org.nmap.nmap_android.R;
+import org.nmap.nmap_android.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

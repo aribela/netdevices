@@ -22,8 +22,8 @@
         </config-file>
 
         <source-file src="www/NetDevices.java" target-dir="src/com/framelova/android-netdevices" />
-        <source-file src="www/org/nmap/binary_installer/NmapBinaryInstaller.java" target-dir="src/com/framelova/android-netdevices" />
-        <source-file src="www/org/nmap/utils/CommandRunner.java" target-dir="src/com/framelova/android-netdevices" />
-        <source-file src="www/org/nmap/nmap_android/MainActivity.java" target-dir="src/com/framelova/android-netdevices" />
+        <source-file src="www/org/nmap4j/core/nmap/NMapExecutionException" target-dir="src/org/nmap4j/core/nmap" />
+        <source-file src="www/org/nmap4j/core/nmap/NMapInitializationException" target-dir="src/org/nmap4j/core/nmap" />
+        <source-file src="www/org/nmap4j/data/NMapRun" target-dir="src/org/nmap4j/data" />
     </platform>
 </plugin>
