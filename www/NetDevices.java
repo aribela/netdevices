@@ -35,7 +35,7 @@ public class NetDevices  extends CordovaPlugin {
         String todo = "";
 
         try {
-            Process proc = Runtime.getRuntime().exec("arp -a ");
+            Process proc = Runtime.getRuntime().exec("cat /proc/net/arp");
 
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
