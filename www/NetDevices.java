@@ -16,6 +16,10 @@ import org.json.JSONException;
 import android.content.Context;
 import android.widget.Toast;
 
+import org.nmap.binary_installer.NmapBinaryInstaller;
+import org.nmap.utils.CommandRunner;
+
+
 public class NetDevices  extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -35,14 +39,15 @@ public class NetDevices  extends CordovaPlugin {
         String todo = "";
 
         try {
-            Process proc = Runtime.getRuntime().exec("cat /proc/net/arp");
+            // Process proc = Runtime.getRuntime().exec("cat /proc/net/arp");
+            // Process proc = Runtime.getRuntime().exec("nmap -sP -n 192.168.0.0/24");
+            Process proc = Runtime.getRuntime().exec("nmap -n 192.168.0.0/24");
 
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
 
             // read the output from the command
             String s = null;
-            
 
             while ((s = stdInput.readLine()) != null) {
                 String[] array = s.split("\\u0020"); //split que separa el arreglo
