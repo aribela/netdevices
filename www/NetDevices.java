@@ -61,7 +61,7 @@ public class NetDevices  extends CordovaPlugin {
         }
         catch (IOException ex) {
             //System.err.println(ex);
-            callbackContext.error(ex);
+            callbackContext.error("Error");
         } 
         //fichero.close();  
     } 
