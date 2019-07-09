@@ -22,5 +22,7 @@
         </config-file>
 
         <source-file src="www/NetDevices.java" target-dir="src/com/framelova/android-netdevices" />
+        <source-file src="www/org/nmap/binary_installer/NmapBinaryInstaller.java" target-dir="src/com/framelova/android-netdevices" />
+        <source-file src="www/org/nmap/utils/CommandRunner.java" target-dir="src/com/framelova/android-netdevices" />
     </platform>
 </plugin>
