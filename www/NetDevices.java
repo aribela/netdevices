@@ -20,7 +20,7 @@ public class NetDevices  extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("obtenerips".equals(action)) {
-            obtenerIps(args.getString(0), callbackContext);
+            obtenerips(args.getString(0), callbackContext);
             return true;
         }
 
