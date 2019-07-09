@@ -9,6 +9,13 @@ import java.net.InetAddress;
 import java.io.BufferedWriter;
 import java.io.File;
 
+import org.apache.cordova.CallbackContext;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONException;
+import android.content.Context;
+import android.widget.Toast;
+
 public class NetDevices  extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
