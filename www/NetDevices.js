@@ -18,7 +18,7 @@ NetDevices.prototype.obtenerips = function(msg, onSuccess, onError) {
 	    };
 	    try{
 	    	alert("exec");
-	    	exec(successCallback, errorCallback, 'NetDevices', 'obtenerips', [msg]);
+	    	cordova.exec(successCallback, errorCallback, 'NetDevices', 'obtenerips', [msg]);
 	    }
 	    catch(error){
 	    	alert("error exec");
