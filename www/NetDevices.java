@@ -19,12 +19,20 @@ import android.widget.Toast;
 public class NetDevices  extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if ("obtenerips".equals(action)) {
-            obtenerips(args.getString(0), callbackContext);
-            return true;
+        try {
+            if ("obtenerips".equals(action)) {
+                obtenerips(args.getString(0), callbackContext);
+                return true;
+            }
+            else {
+                callbackContext.error("Incorrect action parameter: " + action);
+                return false;
+            }
         }
-
-        return false;
+        catch (IOException ex) {
+            //System.err.println(ex);
+            callbackContext.error(ex.getMessage());
+        } 
     }
     private void obtenerips(String msg, CallbackContext callbackContext){
         callbackContext.success("Hola");
@@ -51,7 +59,8 @@ public class NetDevices  extends CordovaPlugin {
         // }
         // catch (IOException ex) {
         //     //System.err.println(ex);
-        //     callbackContext.error("Error");
+        //     callbackContext.error(ex.getMessage());
+
         // } 
     } 
 
