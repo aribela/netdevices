@@ -16,8 +16,13 @@ NetDevices.prototype.obtenerips = function(msg, onSuccess, onError) {
 	    	alert("success net");
 	        onSuccess(obj);
 	    };
-
-	    exec(successCallback, errorCallback, 'NetDevices', 'obtenerips', [msg]);
+	    try{
+	    	exec(successCallback, errorCallback, 'NetDevices', 'obtenerips', [msg]);
+	    }
+	    catch(error){
+	    	alert("error exec");
+			alert(error);
+		}
 	}
 	catch(error){
 		alert(error);
