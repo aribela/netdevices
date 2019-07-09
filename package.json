@@ -1,0 +1,23 @@
+{
+    "name": "cordova-android-netdevices",
+    "version": "1.0.0",
+    "description": "Android NetDevices Plugin",
+    "cordova": {
+        "id": "cordova-android-netdevices",
+        "platforms": [
+            "android"
+        ]
+    },
+    "keywords": [
+        "android",
+        "netdevices",
+        "ecosystem:cordova",
+        "cordova-android"
+    ],
+    "engines": [{
+        "name": "cordova",
+        "version": ">=3.0.0"
+    }],
+    "author": "Framelova<jair.castaneda@framelova.com> (http://framelova.info)",
+    "license": "Apache 2.0"
+}

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-android-netdevices" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AndroidNetDevices</name>
+
+    <description>Android NetDevices Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>android, netdevices</keywords>
+
+    <engines>
+      <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module name="NetDevices" src="www/NetDevices.js">
+        <clobbers target="NetDevices" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NetDevices">
+                <param name="android-package" value="com.framelova.NetDevices" />
+            </feature>
+        </config-file>
+
+        <source-file src="www/NetDevices.java" target-dir="src/com/framelova/android-netdevices" />
+    </platform>
+</plugin>
