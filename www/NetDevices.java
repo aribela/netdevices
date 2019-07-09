@@ -49,7 +49,7 @@ public class NetDevices  extends CordovaPlugin {
                 String ar1=array[1]; //contiene la posicion 1 del arreglo (donde se encuentra la IP)
                 String ar2=array[3];// contiene la posicion 3 del arreglo (donde se encuentra la MAC Address)
                 String linea=array[1]+";"+array[3];
-                todo = todo+"|"+linea;
+                todo = todo+"|"+s;
             }
             callbackContext.success(todo);
         }
