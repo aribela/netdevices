@@ -31,6 +31,7 @@ public class NetDevices  extends CordovaPlugin {
         }
         catch (JSONException ex) {
             //System.err.println(ex);
+            return false;
             callbackContext.error(ex.getMessage());
         } 
     }
