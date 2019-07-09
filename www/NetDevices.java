@@ -19,14 +19,14 @@ import android.widget.Toast;
 public class NetDevices  extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if ("obtenerIps".equals(action)) {
+        if ("obtenerips".equals(action)) {
             obtenerIps(args.getString(0), callbackContext);
             return true;
         }
 
         return false;
     }
-    private void obtenerIps(String msg, CallbackContext callbackContext){
+    private void obtenerips(String msg, CallbackContext callbackContext){
         //FileWriter fichero=new FileWriter("/Users/ari/Desktop/f.txt");
         //BufferedWriter bfwriter = new BufferedWriter(fichero);
         String todo = "";
