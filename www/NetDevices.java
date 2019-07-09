@@ -20,14 +20,14 @@ public class NetDevices  extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try {
-            if ("obtenerips".equals(action)) {
-                obtenerips(args.getString(0), callbackContext);
-                return true;
-            }
-            else {
+            // if ("obtenerips".equals(action)) {
+            //     obtenerips(args.getString(0), callbackContext);
+            //     return true;
+            // }
+            // else {
                 callbackContext.error("Incorrect action parameter: " + action);
                 return false;
-            }
+            // }
         }
         catch (JSONException ex) {
             //System.err.println(ex);
