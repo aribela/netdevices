@@ -22,7 +22,7 @@ public class NetDevices  extends CordovaPlugin {
     private void obtenerIps(String msg, CallbackContext callbackContext){
         //FileWriter fichero=new FileWriter("/Users/ari/Desktop/f.txt");
         //BufferedWriter bfwriter = new BufferedWriter(fichero);
-        String todo = '';
+        String todo;
 
         try {
             Process proc = Runtime.getRuntime().exec("arp -a ");
