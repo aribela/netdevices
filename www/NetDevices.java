@@ -16,7 +16,9 @@ import org.json.JSONException;
 import android.content.Context;
 import android.widget.Toast;
 
-import org.apache.commons.validator.routines.UrlValidator;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class NetDevices  extends CordovaPlugin {
     @Override
