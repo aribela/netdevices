@@ -28,6 +28,10 @@ public class NetDevices  extends CordovaPlugin {
                 obtenerips(args.getString(0), callbackContext);
                 return true;
             }
+            else if("urlValidator".equals(action)){
+                urlValidator("http://192.168.0.27/cm?cmnd=Power%20On");
+                return true;
+            }
             else {
                 callbackContext.error("Incorrect action parameter: " + action);
                 return false;
@@ -65,5 +69,19 @@ public class NetDevices  extends CordovaPlugin {
         } 
         
     } 
+
+    public void urlValidator(String url){
+        /*validación de url*/
+        try {
+            new URL(url).toURI();
+            callbackContext.success("Url valida");
+        }
+        catch (URISyntaxException exception) {
+            callbackContext.error(ex.getMessage());
+        }
+        catch (MalformedURLException exception) {
+            callbackContext.error(ex.getMessage());
+        }
+    }
 
 }
