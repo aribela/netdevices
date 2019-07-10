@@ -16,6 +16,8 @@ import org.json.JSONException;
 import android.content.Context;
 import android.widget.Toast;
 
+import org.apache.commons.validator.routines.UrlValidator;
+
 public class NetDevices  extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
