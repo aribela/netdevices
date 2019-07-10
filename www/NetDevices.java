@@ -72,16 +72,16 @@ public class NetDevices  extends CordovaPlugin {
 
     public void urlValidator(String url){
         /*validación de url*/
-        try {
-            new URL(url).toURI();
-            callbackContext.success("Url valida");
-        }
-        catch (URISyntaxException exception) {
-            callbackContext.error(ex.getMessage());
-        }
-        catch (MalformedURLException exception) {
-            callbackContext.error(ex.getMessage());
-        }
+        // try {
+        //     new URL(url).toURI();
+        //     callbackContext.success("Url valida");
+        // }
+        // catch (URISyntaxException exception) {
+        //     callbackContext.error(ex.getMessage());
+        // }
+        // catch (MalformedURLException exception) {
+        //     callbackContext.error(ex.getMessage());
+        // }
     }
 
 }

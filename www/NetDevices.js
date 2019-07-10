@@ -31,24 +31,24 @@ NetDevices.prototype.obtenerips = function(msg, onSuccess, onError) {
     
 };
 
-NetDevices.prototype.urlValidator = function(msg, onSuccess, onError) {
+// NetDevices.prototype.urlValidator = function(msg, onSuccess, onError) {
 	
-		var errorCallback = function(obj) {
-			onError(obj);
-	    };
+// 		var errorCallback = function(obj) {
+// 			onError(obj);
+// 	    };
 
-	    var successCallback = function(obj) {
-	    	onSuccess(obj);
-	    };
-	    try{
-	    	cordova.exec(successCallback, errorCallback, 'NetDevices', 'urlValidator', [msg]);
-	    }
-	    catch(error){
+// 	    var successCallback = function(obj) {
+// 	    	onSuccess(obj);
+// 	    };
+// 	    try{
+// 	    	cordova.exec(successCallback, errorCallback, 'NetDevices', 'urlValidator', [msg]);
+// 	    }
+// 	    catch(error){
 	  
-		}
+// 		}
 	
     
-};
+// };
 
 if (typeof module != 'undefined' && module.exports) {
     module.exports = NetDevices;
