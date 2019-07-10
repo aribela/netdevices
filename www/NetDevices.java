@@ -52,13 +52,19 @@ public class NetDevices  extends CordovaPlugin {
 
             // read the output from the command
             String s = null;
+            int cont = 1;
 
             while ((s = stdInput.readLine()) != null) {
-                String[] array = s.split("\\u0020"); //split que separa el arreglo
-                String ar1=array[1]; //contiene la posicion 1 del arreglo (donde se encuentra la IP)
-                String ar2=array[3];// contiene la posicion 3 del arreglo (donde se encuentra la MAC Address)
-                String linea=array[1]+";"+array[3];
-                todo = todo+"|"+s;
+                if(cont > 1){
+                    String[] array = s.split("\\u0020"); //split que separa el arreglo
+                    String ar1=array[0]; //contiene la posicion 1 del arreglo (donde se encuentra la IP)
+                    String ar2=array[3];// contiene la posicion 3 del arreglo (donde se encuentra la MAC Address)
+                    if(ar2 != "00:00:00:00:00:00"){
+                        String linea=array[0]+";"+array[3];
+                        todo = todo+"|"+linea;
+                    }
+                }
+                cont++;
             }
             callbackContext.success(todo);
         }
