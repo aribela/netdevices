@@ -1,7 +1,7 @@
 var exec = cordova.require('cordova/exec');
 
 var NetDevices = function() {
-    alert('NetDevices instanced');
+    // alert('NetDevices instanced');
 };
 
 NetDevices.prototype.obtenerips = function(msg, onSuccess, onError) {
