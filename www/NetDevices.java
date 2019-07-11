@@ -59,8 +59,8 @@ public class NetDevices  extends CordovaPlugin {
                     String[] array = s.split("\\u0020"); //split que separa el arreglo
                     String ar1=array[0]; //contiene la posicion 1 del arreglo (donde se encuentra la IP)
                     String ar2=array[2];// contiene la posicion 3 del arreglo (donde se encuentra la MAC Address)
-                    String ar2=array[4];
-                    String ar2=array[5];
+                    // String ar2=array[4];
+                    // String ar2=array[5];
                     if(ar2 != "00:00:00:00:00:00"){
                         String linea=array[0]+";"+array[2]+";"+array[4]+";"+array[5];
                         todo = todo+"|"+linea;
